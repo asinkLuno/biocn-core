@@ -2,7 +2,7 @@
 name = "biocn-core"
 version = "0.1.0"
 description = "SRL-based SVO annotation for Chinese prose using HanLP"
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 dependencies = [
     "hanlp>=2.1.0",
     "torch>=2.0.0",
