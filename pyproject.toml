@@ -1,0 +1,25 @@
+[project]
+name = "biocn-core"
+version = "0.1.0"
+description = "SRL-based SVO annotation for Chinese prose using HanLP"
+requires-python = ">=3.11"
+dependencies = [
+    "hanlp>=2.1.0",
+    "torch>=2.0.0",
+    "loguru>=0.7.0",
+]
+
+[project.optional-dependencies]
+cpu = ["torch>=2.0.0"]
+gpu = ["torch>=2.0.0"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+# CPU install:  uv sync --extra cpu
+# GPU install:  uv sync --extra gpu
+# GPU (CUDA) PyTorch is the default from PyPI.
+# For CPU-only PyTorch, override the index:
+#   uv pip install torch --index-url https://download.pytorch.org/whl/cpu
